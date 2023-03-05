@@ -65,6 +65,7 @@ public class InventarioMain {
                     break;
                 
                 case 3:
+                    System.out.println("\n" + inventory.printMap(mapa));
                     break;
     
                 case 4:
@@ -77,7 +78,7 @@ public class InventarioMain {
                     break;
 
                 case 7:
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("\nSaliendo del programa...");
                     break;
             }
 

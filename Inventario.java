@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Inventario {
     
+    private static final Object K = null;
+
     public void fillInventory(Map<String, ArrayList<String>> map, String linea){
        // linea = linea.replaceAll("|", "");
         String[] products = linea.split("\\|");
@@ -48,6 +50,20 @@ public class Inventario {
         
         return llave;
     }
+
+    public String printMap(Map<String, ArrayList<String>> map) {
+        Random rand = new Random();
+        String lista = "";
+        for (String key : map.keySet()) {
+            ArrayList<String> articulos = map.get(key);
+            for (String articulo : articulos) {
+                int numRand = rand.nextInt(1, 50);
+                lista = lista + "Producto: " + articulo.trim() + "| Categoria: " + key + "| Existencias: " + numRand + "\n";
+            }
+        }
+        return lista;
+    }
+            
 }
 
     
