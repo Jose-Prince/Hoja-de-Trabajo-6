@@ -77,6 +77,7 @@ public class InventarioMain {
                     break;
                 
                 case 6: 
+                System.out.println("\n" + inventory.printMapCategorySort(mapa));
                     break;
 
                 case 7:

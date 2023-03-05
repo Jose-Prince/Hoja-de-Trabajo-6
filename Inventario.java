@@ -93,6 +93,26 @@ public class Inventario {
         }
         return producto;
     }
+
+    public String printMapCategorySort(Map<String, ArrayList<String>> map) {
+        String list = "";
+        ArrayList<String> categorias = new ArrayList<String>();
+        for (String key : map.keySet()) {
+            categorias.add(key);
+            ArrayList<String> articulos = map.get(key);
+            map.put(key, articulos);
+        }
+        Collections.sort(categorias);
+        
+        for (String categoria : categorias) {
+            ArrayList<String> articulos = map.get(categoria);
+            for (String articulo : articulos) {
+                list = list + categoria + "| " + articulo.trim() + "\n";
+            }
+        }
+
+        return list;
+    }
             
 }
 
