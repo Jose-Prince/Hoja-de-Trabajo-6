@@ -65,13 +65,15 @@ public class InventarioMain {
                     break;
                 
                 case 3:
-                    System.out.println("\n" + inventory.printMap(mapa));
+                    System.out.println("\n" + inventory.printMapProduct(mapa));
                     break;
     
                 case 4:
+                    System.out.println("\n" + inventory.printMapProductSort(mapa));
                     break;
     
                 case 5:
+                    System.out.println("\n" + inventory.printMapCategory(mapa));
                     break;
                 
                 case 6: 
