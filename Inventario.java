@@ -19,4 +19,21 @@ public class Inventario {
         }
 
     }
+
+    public void addProduct(String categoria, String nombreProducto, Map<String, ArrayList<String>> map) {
+
+        for (String key : map.keySet()) {
+            String llave = key.replaceAll(" ", "");
+            boolean compare = llave.equalsIgnoreCase(categoria.replaceAll(" ", ""));
+            if (compare == true){
+                ArrayList<String> articulos = map.get(key);
+                articulos.add(nombreProducto);
+                map.put(key, articulos);
+            }
+            
+        }
+
+    }
 }
+
+    

@@ -27,16 +27,60 @@ public class InventarioMain {
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
 
                 inventory.fillInventory(mapa, data);
 
             }
+            System.out.println(mapa.size());
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+
+        while (num <= 6){
+            System.out.println("\n1: Agregar producto\n2: Mostrar categoria de un producto\n3: Mostrar datos de un producto\n4: Mostrar datos de un producto (ordenado)\n5: Mostrar producto y categoría del inventario\n6: Mostrar producto y categoría del inventario (ordenado)\n\n7: Salir del programa");
+            num = in.nextInt();
+            in.nextLine();
+            
+            switch (num) {
+                case 1:
+                    System.out.println("\nCategorias: ");
+                    for (String key : mapa.keySet()) {
+                        System.out.println("- " + key);
+                    }
+                    System.out.println("Ingrese la categoría del producto: ");
+                    String categoria = in.nextLine();
+                    System.out.println("Ingrese el nombre del producto: ");
+                    String nombreP = in.nextLine();
+    
+                    inventory.addProduct(categoria, nombreP, mapa);
+    
+                    break;
+            
+                case 2:
+                    
+                    break;
+                
+                case 3:
+                    break;
+    
+                case 4:
+                    break;
+    
+                case 5:
+                    break;
+                
+                case 6: 
+                    break;
+
+                case 7:
+                    System.out.println("Saliendo del programa...");
+                    break;
+            }
+
+        }
+
 
     } catch (Exception e) {
         in.nextLine();
@@ -44,7 +88,6 @@ public class InventarioMain {
         System.out.println("Opción inválida");
     }
 
-    
 
 	  
   }
