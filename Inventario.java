@@ -34,6 +34,20 @@ public class Inventario {
         }
 
     }
+
+    public String searchCategory(String nombreProducto, Map<String, ArrayList<String>> map) {
+        String llave = "INVALIDA";
+        for (String  key : map.keySet()) {
+            ArrayList<String> productos = map.get(key);
+            for(int i = 0; i < productos.size(); i++){
+                String producto = productos.get(i).replaceAll(" ", "").trim();
+                if (producto.equalsIgnoreCase(nombreProducto.replaceAll(" ", "")))
+                    llave = key;
+            }
+        }
+        
+        return llave;
+    }
 }
 
     

@@ -59,7 +59,9 @@ public class InventarioMain {
                     break;
             
                 case 2:
-                    
+                    System.out.println("\nIngrese el nombre del producto:");
+                    String choice = in.nextLine();
+                    System.out.println("\nLa categoria de " + choice + " es: " + inventory.searchCategory(choice, mapa));
                     break;
                 
                 case 3:
