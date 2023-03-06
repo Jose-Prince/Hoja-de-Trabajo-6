@@ -1,3 +1,8 @@
+/**
+ * @author José Prince
+ * @date 06/03/2023
+ * Algoritmos y estructura de datos
+ */
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.ArrayList;

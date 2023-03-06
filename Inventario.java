@@ -1,9 +1,21 @@
+/**
+ * @author José Prince
+ * @date 06/03/2023
+ * Algoritmos y estructura de datos
+ */
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Inventario {
 
+    
+    /** 
+     * @param map
+     * @param linea
+     * Llena el mpa con los datos del inventario
+     */
     public void fillInventory(Map<String, ArrayList<String>> map, String linea){
-       // linea = linea.replaceAll("|", "");
         String[] products = linea.split("\\|");
         String tipo = products[0];
 
@@ -20,6 +32,11 @@ public class Inventario {
 
     }
 
+    
+    /** 
+     * @param map
+     * Añade un producto al map segun su clasificación
+     */
     public void addProduct(String categoria, String nombreProducto, Map<String, ArrayList<String>> map) {
 
         for (String key : map.keySet()) {
@@ -35,6 +52,12 @@ public class Inventario {
 
     }
 
+    
+    /** 
+     * @param map
+     * @return String
+     * Busca la categoría de un producto
+     */
     public String searchCategory(String nombreProducto, Map<String, ArrayList<String>> map) {
         String llave = "INVALIDA";
         for (String  key : map.keySet()) {
@@ -49,6 +72,12 @@ public class Inventario {
         return llave;
     }
 
+    
+    /** 
+     * @param map
+     * @return String
+     * Imprime la lista de los productos junto a su categoria y sus existencias
+     */
     public String printMapProduct(Map<String, ArrayList<String>> map) {
         Random rand = new Random();
         String lista = "";
@@ -62,6 +91,12 @@ public class Inventario {
         return lista;
     }
 
+    
+    /** 
+     * @param map
+     * @return String
+     * Imprime de forma ordenada los productos junto a su clasificación y número de existencias
+     */
     public String printMapProductSort(Map<String, ArrayList<String>> map) {
         ArrayList<String> products = new ArrayList<String>();
         for (String key : map.keySet()) {
@@ -82,6 +117,12 @@ public class Inventario {
         return lista;
     }
 
+    
+    /** 
+     * @param map
+     * @return String
+     * Imprime la clasificación de los productos junto a los productos respectivos
+     */
     public String printMapCategory(Map<String, ArrayList<String>> map) {
         String producto = "";
 
@@ -94,6 +135,12 @@ public class Inventario {
         return producto;
     }
 
+    
+    /** 
+     * @param map
+     * @return String
+     * Imprime de forma ordenada la clasificación de los productos junto a los productos respectivos
+     */
     public String printMapCategorySort(Map<String, ArrayList<String>> map) {
         String list = "";
         ArrayList<String> categorias = new ArrayList<String>();
@@ -112,8 +159,7 @@ public class Inventario {
         }
 
         return list;
-    }
-            
+    }       
 }
 
     

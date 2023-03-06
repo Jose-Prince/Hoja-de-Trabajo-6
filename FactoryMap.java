@@ -1,7 +1,18 @@
+/**
+ * @author José Prince
+ * @date 06/03/2023
+ * Algoritmos y estructura de datos
+ */
 import java.util.*;
 
 public class FactoryMap<K,V> {
     
+    
+    /** 
+     * @param num
+     * @return Map<K, V>
+     * Crea la instancia de la implementación de map a utilizar
+     */
     public Map<K,V> getInstance(int num) {
         Map<K,V> mapImplementado = null;
 
